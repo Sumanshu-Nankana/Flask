@@ -1,0 +1,7 @@
+Step1: python3 app.py 5001
+Step2: python3 app.py 5002
+Step3: Update nginx.confd in /etc/nginx  (using Include Statement)
+Step4: su (become root user)
+Step5: nginx -t (To test configuration)
+Step6: nginx -s reload (to reload configuration)
+Step7: localhost:80

@@ -1,0 +1,2 @@
+Step1: docker-compose up --build
+Step2: localhost:8080

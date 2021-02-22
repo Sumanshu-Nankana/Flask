@@ -1,0 +1,5 @@
+In terminal type:
+
+ngrok http port_on_which_local_app_is_running
+example:
+ngrok http 5000
