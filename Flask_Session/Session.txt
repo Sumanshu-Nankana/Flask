@@ -1,0 +1,9 @@
+- Cookies Stored only on Client Site. But Session can be stored both on Client as well as Server Side.
+
+- HTTP is a stateless. So New request don't have the information about the previous request.
+  So, web apps typically need a way to store data between eah request as a user  interacts  with the app itself.
+
+- So, session is used to store information related to a user, across different requests.
+
+- Client Side - Sessions are stored client-side in browser cookies
+  Server Side - Sessions are stored server-side and only the session-ID stored at client side in browser (Cookies).

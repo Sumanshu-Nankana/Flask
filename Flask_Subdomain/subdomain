@@ -1,0 +1,29 @@
+- if we create a simple Flask App and then run it on our local machine; it will run on localhost or 127.0.0.1
+
+- if we want to run on some other domain, we need to map 127.0.0.1 with 'some-other-domain' like sumanshu.com
+  for this first we need to update 'hosts' file which is in /etc/hosts/ file as
+  127.0.0.1   sumanshu.com
+
+  Also, with in the flask app, we need to do some configuration as:
+  app.config['SERVER_NAME'] = 'sumanshu.com:5000'
+
+  And then when we run the app, it will run on 'sumanshu.com:5000' ; instead of localhost:5000
+
+- But, if we give some different name in config file in app.py and some other name in /etc/hosts
+  Then it will show us - SERVER BIND address error"
+
+- Also, Many times - we saw REST API as - "api.github.com" - which is a subdomain or a child domain of github.com
+  or 'practice.geeksforgeeks.org' which is a subdomain for 'geeksforgeeks.org'
+
+  So, if we want same kind of domain name in our app, we need to use keyword 'subdomain' as:
+  @app.route('/', subdoamin='api')
+
+  Now, instead of accessing direct URL:5000 - we need to access api.url_name:5000
+  But, before accessing api.url_name:5000
+  We need to do one more entry in /etc/hosts file as:
+
+  127.0.0.1  sumanshu.com
+  127.0.0.0  api.sumanshu.com
+
+- we can't use the subdomain with the localhost i.e.
+  127.0.0.1  api.localhost    [ This is wrong ]

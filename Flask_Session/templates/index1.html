@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+	{% if session.name %}
+		You are Login as {{ session.name }}<br><br>
+		<a href={{url_for('logout')}}>Logout</a>
+	{% else %}
+		You are NOT Logged IN <br><br>
+		<a href={{url_for('login1')}}>Login</a>
+	{% endif %}
+{% endblock %}
